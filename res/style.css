@@ -1,0 +1,27 @@
+div.titleBar {
+	padding: 150px;
+	color: white;
+	text-align: center;
+	background: url('../images/code.jpg');
+	text-shadow: 0px 3px 5px #000;
+}
+.pingList {
+	padding: 20px;
+	text-align: center;
+	background: #ecf0f1;
+	transition: 0.3s;
+}
+.pingList:hover {
+	-webkit-filter: brightness(90%);
+	box-shadow: isset 0px 5px 5px #000;
+	cursor: hand;
+}
+img > .editPage {
+    transition: 0.3s;
+}
+img > .editPage:hover {
+    filter: brightness(80%);
+}
+.alert-fade {
+    transition: 0.6s;
+}

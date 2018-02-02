@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteRule ^service/(.*)/view$ viewService.php?id=$1 [NC,L]
+RewriteRule ^service/(.*)/view/(.*)$  viewService.php?id=$1&show=$2 [NC,L]
+RewriteRule ^service/(.*)/edit$ editService.php?id=$1 [NC,L]
+
+RewriteRule ^error/(.*)$ error.php?code=$1 [NC,L]
+RewriteRule ^login$ login.php [NC,L]
+RewriteRule ^register$ register.php [NC,L]
+RewriteRule ^logout$ logout.php [NC,L]
+RewriteRule ^denied$ /error/403
+RewriteRule ^services/list$ listServices.php [NC,L]
+RewriteRule ^maintenance$ /maintenance.php [NC,L]
+ErrorDocument 404 /error/404
+ErrorDocument 403 /error/403
+ErrorDocument 500 /error/500
