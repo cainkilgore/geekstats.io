@@ -11,3 +11,5 @@ Alpha instructions:
 3. Make sure AllowOverride All is in your Vhosts file.
 4. Check it works
 5. Report Bugs
+
+Be advised this was tested using Ubuntu!
