@@ -9,6 +9,7 @@ RewriteRule ^register$ register.php [NC,L]
 RewriteRule ^logout$ logout.php [NC,L]
 RewriteRule ^denied$ /error/403
 RewriteRule ^services/list$ listServices.php [NC,L]
+RewriteRule ^services/add$ addService.php [NC,L]
 RewriteRule ^maintenance$ /maintenance.php [NC,L]
 ErrorDocument 404 /error/404
 ErrorDocument 403 /error/403
