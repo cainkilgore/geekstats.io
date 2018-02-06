@@ -1,34 +1,37 @@
 
-web.cainkilgore.com:80 => 0
+web.cainkilgore.com:80 => -1
 Popped into SQL
 
-plex.cainkilgore.com:8989 => 14
+plex.cainkilgore.com:8989 => 19
 Popped into SQL
 
-facebook.com:80 => 13
+facebook.com:80 => 14
 Popped into SQL
 
-twitter.com:80 => 11
+twitter.com:80 => 107
 Popped into SQL
 
-static1.triook.technology:443 => 210
+static1.triook.technology:443 => 180
 Popped into SQL
 
-lax.cainkilgore.com:80 => 178
+lax.cainkilgore.com:80 => 138
 Popped into SQL
 
-plex.cainkilgore.com:7878 => 13
+plex.cainkilgore.com:7878 => 17
 Popped into SQL
 
-8.8.4.4:53 => 5
+8.8.4.4:53 => 4
 Popped into SQL
 
-plex.cainkilgore.com:32400 => 25
+plex.cainkilgore.com:32400 => 21
 Popped into SQL
 
 plex.cainkilgore.com:6767 => -1
 Popped into SQL
 
-plex.cainkilgore.com:5656 => 14
+plex.cainkilgore.com:5656 => 10
+Popped into SQL
+
+tinder.com:443 => 24
 Popped into SQL
 

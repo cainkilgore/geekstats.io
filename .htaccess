@@ -2,7 +2,7 @@ RewriteEngine On
 RewriteRule ^service/(.*)/view$ viewService.php?id=$1 [NC,L]
 RewriteRule ^service/(.*)/view/(.*)$  viewService.php?id=$1&show=$2 [NC,L]
 RewriteRule ^service/(.*)/edit$ editService.php?id=$1 [NC,L]
-
+RewriteRule ^setup$ setup.php [NC,L]
 RewriteRule ^error/(.*)$ error.php?code=$1 [NC,L]
 RewriteRule ^login$ login.php [NC,L]
 RewriteRule ^register$ register.php [NC,L]
