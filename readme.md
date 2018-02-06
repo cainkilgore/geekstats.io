@@ -7,19 +7,16 @@ Geekstats.io is the alternative service which can monitor any and all services t
 `> php5.4`
 `mysql`
 
-# Known Issues
-- Unable to create services (You can do so manually in the SQL table `stats`)
-
 # Installation
 
 1. Fork this repository and place it into a publicly accessible web directory. (Preferably give it it's own domain, like geekstats.domain.com)
 2. Create a new MySQL Database and grant privileges to a new user.
-3. Copy https://cain.sh/i/geekstats.sql and import it into the database you just created.
-4. Edit config.php and update the `$databaseHostname, $databaseName, $databasePassword, $databaseUsername` details to reflect.
-5. Edit core/cron-ping.php to reflect the file path that servicePing.php is in.
-6. Create a `crontab -e` for the PHP script above.
-7. Navigate to the web directory in your browser and register an account.
-8. Done!
+3. Edit config.php and update the `$databaseHostname, $databaseName, $databasePassword, $databaseUsername` details to reflect.
+4. Edit core/cron-ping.php to reflect the file path that servicePing.php is in.
+5. Create a `crontab -e` for the PHP script above.
+6. Navigate to the web directory in your browser and go to /setup.
+7. Assuming your config.php settings are correct, hit the "Setup Database" button.
+8. You're ready to go - just navigate to your Homepage and register an account.
 
 
 This is still a heavy work in progress and is not finished, _yet_. Please leave feedback and create Pull Requests if you feel a feature that isn't already in there should be.
