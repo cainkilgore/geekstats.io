@@ -49,7 +49,7 @@
         }
         
         while($row = mysqli_fetch_array($q)) {
-            $entry = array($row[nickname], $row[hostname], $row[port], $row[show_connection], $row["public"]);
+            $entry = array($row[id], $row[nickname], $row[hostname], $row[port], $row[show_connection], $row["public"]);
             array_push($hostnameList, $entry);
         }
     ?>
@@ -71,13 +71,13 @@
         
         <?php
             foreach($hostnameList as $hostname => $i) {
-                echo "httpGetAsync('servicePing.php?hostname=$i[1]&port=$i[2]', 'box$hostname', 'ip$hostname');\n";
+                echo "httpGetAsync('servicePing.php?hostname=$i[2]&port=$i[3]', 'box$hostname', 'ip$hostname');\n";
             }
         ?>
     }
 
     function gotoService(service) {
-        window.location.href = "service/" + (service+1) + "/view";
+        window.location.href = "service/" + (service) + "/view";
     }
 
     window.onload = runPingChecks();
@@ -89,14 +89,14 @@
             foreach($hostnameList as $hostname => $i) {
                 $titleBuilder = "";
                 if($_SESSION["username"] != "") {
-                    $titleBuilder = $i[0];
+                    $titleBuilder = $i[1];
                     if($i[4] == "false") $titleBuilder .= " <img src='/images/locked.svg' width='18px' />";
                     if($i[4] == "true") $titleBuilder .= " <img src='/images/public.svg' width='18px' />";
                 } else {
-                    $titleBuilder = $i[0];
+                    $titleBuilder = $i[1];
                 }
-                echo "<div class='col-md-4 pingList' id='box$hostname' onClick=\"gotoService($hostname)\"><h3>$titleBuilder<br>";
-                if($i[3]) echo "<font size='1px'>($i[1]:$i[2])</font><br>";
+                echo "<div class='col-md-4 pingList' id='box$hostname' onClick=\"gotoService($i[0])\"><h3>$titleBuilder<br>";
+                if($i[3]) echo "<font size='1px'>($i[2]:$i[3])</font><br>";
                 echo "<span id='ip$hostname'><img src='/images/loading.gif' width='32px' /></span></h3></td></div>\n";
             }
         ?>

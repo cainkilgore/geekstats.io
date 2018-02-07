@@ -26,7 +26,8 @@ function fadeMessage() {
             echo "<body onload=\"fadeMessage()\"><div class='alert alert-success alert-fade' role='alert' id='alert'>Your service was successfully changed.</div>\n<hr>";
         }
     ?>
-    
+    <br>
+    <a class="btn btn-success" href="/services/add">Add new Service</a><br><br>
     <div class="table-responsive">
         <table class="table table-striped table-bordered table-hover">
             <thead class="thead-dark">
