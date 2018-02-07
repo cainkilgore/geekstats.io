@@ -90,13 +90,13 @@
                 $titleBuilder = "";
                 if($_SESSION["username"] != "") {
                     $titleBuilder = $i[1];
-                    if($i[4] == "false") $titleBuilder .= " <img src='/images/locked.svg' width='18px' />";
-                    if($i[4] == "true") $titleBuilder .= " <img src='/images/public.svg' width='18px' />";
+                    if($i[5] == "false") $titleBuilder .= " <img src='/images/locked.svg' width='18px' />";
+                    if($i[5] == "true") $titleBuilder .= " <img src='/images/public.svg' width='18px' />";
                 } else {
                     $titleBuilder = $i[1];
                 }
                 echo "<div class='col-md-4 pingList' id='box$hostname' onClick=\"gotoService($i[0])\"><h3>$titleBuilder<br>";
-                if($i[3]) echo "<font size='1px'>($i[2]:$i[3])</font><br>";
+                if($i[4] == "true") echo "<font size='1px'>($i[2]:$i[3])</font><br>";
                 echo "<span id='ip$hostname'><img src='/images/loading.gif' width='32px' /></span></h3></td></div>\n";
             }
         ?>
